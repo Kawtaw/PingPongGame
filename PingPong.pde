@@ -157,6 +157,8 @@ void draw() {
       } else {
         text("Right Won!",200,300);
       }
+      textSize(50);
+      text("Press P to Restart",200,400);
     }
   }
 }
