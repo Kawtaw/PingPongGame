@@ -23,6 +23,7 @@ int RightScore = 0;
 boolean BallFroze = false;
 boolean GameOver = false;
 
+// This procedure Reset the ball position, speed, and moving direction
 void SetBall() {
   BallFroze = false;
   BallX = 400;
@@ -40,8 +41,6 @@ void SetBall() {
   }
   BallXSpeed = 3;
   BallYSpeed = 3;
-  BallDiameter = 20;
-  BallDiameterHalf = 10;
 }
 
 void setup() {
@@ -50,6 +49,7 @@ void setup() {
   SetBall();
 }
 
+// This procedure reset the score and paddle position for a new game.
 void Restart() {
   LeftScore = 0;
   RightScore = 0;
@@ -58,6 +58,7 @@ void Restart() {
   RPY = 250;
 }
 
+// Bounce the ball in a direction based on its parameter
 void Bounce(boolean Horizontal) {
   if (Horizontal) {
     BallXMove = BallXMove*-1;
@@ -68,6 +69,7 @@ void Bounce(boolean Horizontal) {
   BallYSpeed = BallYSpeed + 0.25; // Speed up ball vertical movement
 }
 
+// This procedure increase the score for the player that scored
 void Score(boolean Right) {
   if (Right) {
     LeftScore = LeftScore + 1;
@@ -82,6 +84,7 @@ void Score(boolean Right) {
   }
 }
 
+// Check the ball position to see where it's at and call the bounce function with the correct parameter.
 void checkPosition() {
   BallDiameterHalf = BallDiameter/2;
   if (!BallFroze) {
