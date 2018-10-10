@@ -46,10 +46,10 @@ void SetBall() {
 void setup() {
   background(50,50,50);
   size(800,600);
-  SetBall();
+  Restart();
 }
 
-// This procedure reset the score and paddle position for a new game.
+// This procedure reset the global variable for a new game.
 void Restart() {
   LeftScore = 0;
   RightScore = 0;
