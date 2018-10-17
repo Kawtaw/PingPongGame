@@ -46,6 +46,16 @@ void SetBall() {
 void setup() {
   background(50,50,50);
   size(800,600);
+  
+  if (width > displayWidth) {
+    println("ERROR: Change ping pong table size-lengh, it is too big");
+    exit();
+  }
+  if (height > displayHeight) {
+    println("ERROR: Change ping pong table size-lengh, it is too big");
+    exit();
+  }
+  
   Restart();
 }
 
